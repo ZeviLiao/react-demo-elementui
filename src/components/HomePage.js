@@ -2,13 +2,14 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import { Layout } from 'element-react';
 import CardPanel from './CardPanel'
+import '../styles/home-page.scss';
 
 const HomePage = () => {
   return (
     <div>
       <Layout.Row gutter="20">
         <Layout.Col span="16">
-          <div className="grid-content bg-purple">
+          <div className="grid-content bg-purple header">
             <CardPanel />
           </div></Layout.Col>
         <Layout.Col span="8"><div className="grid-content bg-purple"><CardPanel /></div></Layout.Col>

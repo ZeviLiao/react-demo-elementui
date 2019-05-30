@@ -28,7 +28,7 @@ export default class SelectDemo extends Component {
 
     render() {
         return (
-            <Select value={this.state.value} clearable={true}>
+            <Select value={this.state.value}>
                 {
                     this.state.options.map(el => {
                         return <Select.Option key={el.value} label={el.label} value={el.value} />
