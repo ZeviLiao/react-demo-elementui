@@ -5,7 +5,8 @@ $vin-red: #ff0000;
 
 /* Styles */
 body {
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  // font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4em;
   color: #4d4d4d;
   min-width: 230px;
@@ -14,18 +15,40 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  font-weight: 300;
+  // font-weight: 300;
 }
 
 td {
-	padding: 12px;
+  padding: 12px;
 }
 
 h2 {
-	color: $vin-blue;
+  color: $vin-blue;
 }
 
-.savings { color: $vin-green; }
-.loss { color: $vin-red; }
-input.small { width: 46px; }
-td.fuel-savings-label { width: 175px; }
+.savings {
+  color: $vin-green;
+}
+.loss {
+  color: $vin-red;
+}
+input.small {
+  width: 46px;
+}
+td.fuel-savings-label {
+  width: 175px;
+}
+
+.grid-content {
+  // color:white;
+  min-height: 100px;
+  padding: 5px;
+  background-color: lightgray;
+  box-sizing: border-box;
+  // border-radius: 10px;
+}
+
+.bg-purple {
+  // background-color:red;
+  margin-bottom: 5px;
+}
