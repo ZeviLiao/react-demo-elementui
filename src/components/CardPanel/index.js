@@ -3,19 +3,27 @@ import React, { Component } from 'react'
 import { Button, Card } from 'element-react';
 
 export default class index extends Component {
-    // static propTypes = {
-    //     prop: PropTypes
-    // }
+    constructor(props) {
+        super(props);
+        this.state = {
+            shouldHide: false,
+        };
+    }
+
+    handleClose = () => {
+        this.setState({ shouldHide: true });
+    }
 
     render() {
+        const { shouldHide } = this.state;
         return (
-            <Card
-                className="box-card"
+            <Card className={shouldHide ? 'hidden' : ''}
+                // className="box-card"
                 header={
                     <div className="clearfix">
                         <span>Card Name</span>
                         <span style={{ "float": "right" }}>
-                            <Button type="text">X</Button>
+                            <Button type="text" onClick={this.handleClose}>X</Button>
                         </span>
                     </div>
                 }

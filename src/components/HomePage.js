@@ -1,10 +1,11 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import { Layout } from 'element-react';
+import { Layout, Collapse } from 'element-react';
 import CardPanel from './CardPanel'
 import '../styles/home-page.scss';
 
 const HomePage = () => {
+  const activeName = "1";
   return (
     <div>
       <Layout.Row gutter="20">
@@ -23,49 +24,14 @@ const HomePage = () => {
       <Layout.Row gutter="20">
         <Layout.Col span="4"><div className="grid-content bg-purple"></div></Layout.Col>
         <Layout.Col span="16"><div className="grid-content bg-purple">
-          <div className="sidebar-widget widget-friends">
-            <h6>Friends</h6>
-            <ul>
-              <li className="status-online">
-                <figure className="profile-picture">
-                  <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" className="img-circle" />
-                </figure>
-                <div className="profile-info">
-                  <span className="name">Joseph Doe Junior</span>
-                  <span className="title">Hey, how are you?</span>
-                </div>
-              </li>
-              <li className="status-online">
-                <figure className="profile-picture">
-                  <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" className="img-circle" />
-                </figure>
-                <div className="profile-info">
-                  <span className="name">Joseph Doe Junior</span>
-                  <span className="title">Hey, how are you?</span>
-                </div>
-              </li>
-              <li className="status-offline">
-                <figure className="profile-picture">
-                  <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" className="img-circle" />
-                </figure>
-                <div className="profile-info">
-                  <span className="name">Joseph Doe Junior</span>
-                  <span className="title">Hey, how are you?</span>
-                </div>
-              </li>
-              <li className="status-offline">
-                <figure className="profile-picture">
-                  <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" className="img-circle" />
-                </figure>
-                <div className="profile-info">
-                  <span className="name">Joseph Doe Junior</span>
-                  <span className="title">Hey, how are you?</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-        </div></Layout.Col>
+          <Collapse value={activeName}>
+            <Collapse.Item title="Consistency" name="1">
+              <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
+              <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+            </Collapse.Item>
+          </Collapse>
+        </div>
+        </Layout.Col>
         <Layout.Col span="4"><div className="grid-content bg-purple"></div></Layout.Col>
       </Layout.Row>
     </div>
